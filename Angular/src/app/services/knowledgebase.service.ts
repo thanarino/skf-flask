@@ -19,7 +19,7 @@ export class KnowledgebaseService
   getKnowledgeBase(category_id: number): Observable<Knowledgebase[]>
   {
     return this.http.get(environment.API_ENDPOINT + `/kb/items/${category_id}`, { headers: this.headers }).pipe(
-      map(response => response.json().items));
+      map(response => response.json().items.sort((a,b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0))));
   }
 
   getKnowledgebaseItem(id: number): Observable<Knowledgebase[]>

@@ -23,7 +23,7 @@
   <div class="col-wrapper">
     <div class="lock-screen">
       <div class="login-wrapper">
-        <div class="logo"><img src="assets/img/logos/logo_login.svg" width="60" height="60" /></div>
+        <div class="logo"><img src="assets/img/logos/logo.svg" width="60" height="60" /></div>
         <div *ngIf="expired">
           <br/>
           <ngb-alert [dismissible]="false">
@@ -47,7 +47,7 @@
                 {{errors}}
                 </span>
                 <div class="modal-footer centered">
-                  <a style="text-align:center; color:#515594" href="#" routerLink="/first-login">first-login</a>
+                  <a style="text-align:center; color:#1976D2" href="#" routerLink="/first-login">first-login</a>
                   <button (click)="onLogin()" class="btn btn-theme03" type="submit">Login</button>
                   <button (click)="skipLogin()"  class="btn btn-theme04" type="submit">Skip</button>
                 </div>

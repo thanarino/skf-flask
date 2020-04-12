@@ -84,45 +84,45 @@ describe('Header component', () => {
   it('check getProjectStyle banner color to return true', () => {
     component.projects = true;
     component.getProjectStyle();
-    expect(component.color).toEqual('#515594')
+    expect(component.color).toEqual('#1976D2')
   });
 
   it('check getChecklistStyle banner color to return true', () => {
     component.check = true;
     component.getChecklistStyle();
-    expect(component.color).toEqual('#515594')
+    expect(component.color).toEqual('#1976D2')
   });
 
   it('check getGroupStyle banner color to return true', () => {
     component.groups = true;
     component.getGroupStyle();
-    expect(component.color).toEqual('#515594')
+    expect(component.color).toEqual('#1976D2')
   });
 
 
   it('check getCodeStyle banner color to return true', () => {
     component.code = true;
     component.getCodeStyle();
-    expect(component.color).toEqual('#515594')
+    expect(component.color).toEqual('#1976D2')
   });
 
 
   it('check getKnowledgeStyle banner color to return true', () => {
     component.knowledge = true;
     component.getKnowledgeStyle();
-    expect(component.color).toEqual('#515594')
+    expect(component.color).toEqual('#1976D2')
   });
 
   it('check getLabsStyle banner color to return true', () => {
     component.code = true;
     component.getLabsStyle();
-    expect(component.color).toEqual('#515594')
+    expect(component.color).toEqual('#1976D2')
   });
 
   it('check getChecklistStyle banner color to return true', () => {
     component.check = true;
     component.getChecklistStyle();
-    expect(component.color).toEqual('#515594')
+    expect(component.color).toEqual('#1976D2')
   });
 
 

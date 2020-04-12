@@ -5,4 +5,4 @@ export class AppSettings {
    public static SKIP_LOGIN = sessionStorage.getItem('skip_login');
 }
 
-sessionStorage.clear()
+// sessionStorage.clear()

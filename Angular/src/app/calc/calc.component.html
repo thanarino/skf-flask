@@ -1,0 +1,190 @@
+<section id="main-content" class="labs">
+    <section class="intro">
+        <div class="inner">
+            <div class="text">
+                <h1>Convene CVSS Calculator</h1>
+                <p style="width:100%">Hover over metric group names, metric names and metric values for a summary of the information in the official CVSS v3.0 Specification Document.</p>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="content-panel">
+                    <fieldset id="baseMetricGroup" class="cvss-calculator">
+                        <legend id="baseMetricGroup_Legend" title="The Base Metric group represents the intrinsic  characteristics of a vulnerability that are constant over time and across user environments. Determine the vulnerable component and score Attack Vector, Attack Complexity, Privileges Required and User Interaction relative to this.">Base Score</legend>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="row-md-4 mt-3">
+                                    <div class="card">
+                                        <div class="card-header" title="This metric reflects the context by which vulnerability exploitation is possible. The Base Score increases the more remote (logically, and physically) an attacker can be in order to exploit the vulnerable component.">
+                                            <p style="margin:0.75rem" id="AV_Heading">Access Vector (AV)</p>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <input name="AV" value="L" id="AV_L" type="radio">
+                                                    <label for="AV_L" id="AV_L_Label" title="Attacker needs physical access to the system. Attacks involving the client, like mobile apps, will fall here.">Local (L)</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input name="AV" value="N" id="AV_N" type="radio">
+                                                    <label for="AV_N" id="AV_N_Label" title="Remotely exploitable attacks. Attacks that can be sent over the network to attack the back-end, like Portal.">Network (N)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-md-4 mt-3">
+                                    <div class="card">
+                                        <div class="card-header" title="This metric describes the conditions beyond the attacker’s control that must exist in order to exploit the vulnerability. Such conditions may require the collection of more information about the target, the presence of certain system configuration settings, or computational exceptions.">
+                                            <p style="margin:0.75rem" id="AC_Heading">Attack Complexity (AC)</p>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <input name="AC" value="H" id="AC_H" type="radio">
+                                                    <label for="AC_H" id="AC_H_Label" title="Successful attacks cannot be accomplished at will and would need to invest considerable amount of time and effort in preparation and execution.
+                                                    E.g. an attack that will require special technical skills, like Man-in-the-Middle attacks or attacks that would need race conditions, can be technical or domain conditions.">High (H)</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input name="AC" value="L" id="AC_L" type="radio">
+                                                    <label for="AC_L" id="AC_L_Label" title="Specialized access conditions or extenuating circumstances do not exist. An attacker can expect repeatable success against the vulnerable component.">Low(L)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-md-4 mt-3">
+                                    <div class="card">
+                                        <div class="card-header" title="This metric describes the level of privileges an attacker must possess before successfully exploiting the vulnerability. This Base Score increases as fewer privileges are required.">
+                                            <p style="margin:0.75rem" id="PR_Heading">Privileges Required (PR)</p>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <input name="PR" value="H" id="PR_H" type="radio">
+                                                    <label for="PR_H" id="PR_H_Label" title="Attacker is authorized but needs to to have elevated privileges to launch the attack. E.g. suppadmin">High (H)</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input name="PR" value="M" id="PR_M" type="radio">
+                                                    <label for="PR_M" id="PR_M_Label" title="Attacker is authorized but only with basic user functionalities. E.g. General user">Medium (M)</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input name="PR" value="L" id="PR_L" type="radio">
+                                                    <label for="PR_L" id="PR_L_Label" title="Attacker does not need authorization to be able to launch the attack.">Low (L)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="row-md-3 mt-3">
+                                    <div class="card">
+                                        <div class="card-header" title="This metric measures the impact to the confidentiality of the information resources managed by a software component due to a successfully exploited vulnerability. Confidentiality refers to limiting information access and disclosure to only authorized users, as well as preventing access by, or disclosure to, unauthorized ones.">
+                                            <p style="margin:0.75rem" id="C_Heading">Confidentiality (C)</p>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <input name="C" value="N" id="C_N" type="radio">
+                                                    <label for="C_N" id="C_N_Label" title="Nothing is disclosed.">None (N)</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input name="C" value="L" id="C_L" type="radio">
+                                                    <label for="C_L" id="C_L_Label" title="Considerable amount of information is disclosed. E.g. Usernames of all users are disclosed.">Low (L)</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input name="C" value="H" id="C_H" type="radio">
+                                                    <label for="C_H" id="C_H_Label" title="Total information is disclosed. E.g. Data breach -- all data of the system can be accessed.">High (H)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-md-3 mt-3">
+                                    <div class="card">
+                                        <div class="card-header" title="This metric measures the impact to integrity of a successfully exploited vulnerability. Integrity refers to the trustworthiness and veracity of information.">
+                                            <p style="margin:0.75rem" id="I_Heading">Integrity (I)</p>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <input name="I" value="N" id="I_N" type="radio">
+                                                    <label for="I_N" id="I_N_Label" title="No data or files can be changed.">None (N)</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input name="I" value="L" id="I_L" type="radio">
+                                                    <label for="I_L" id="I_L_Label" title="Selected data or files can be changed. E.g. SQL injection that can update the permissions of a document.">Low (L)</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input name="I" value="H" id="I_H" type="radio">
+                                                    <label for="I_H" id="I_H_Label" title="Attacker can modify any file or data in the system. E.g. Attackers gained admin access to the database.">High (H)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-md-3 mt-3">
+                                    <div class="card">
+                                        <div class="card-header" title="This metric measures the impact to the availability of the impacted component resulting from a successfully exploited vulnerability. It refers to the loss of availability of the impacted component itself, such as a networked service (e.g., web, database, email). Since availability refers to the accessibility of information resources, attacks that consume network bandwidth, processor cycles, or disk space all impact the availability of an impacted component.">
+                                            <p style="margin:0.75rem" id="A_Heading">Availability (A)</p>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <input name="A" value="N" id="A_N" type="radio">
+                                                    <label for="A_N" id="A_N_Label" title="No impact.">None (N)</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input name="A" value="L" id="A_L" type="radio">
+                                                    <label for="A_L" id="A_L_Label" title="Reduced performance or loss of some functionalities. E.g. DoS attack that can significantly load our servers.">Low (L)</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input name="A" value="H" id="A_H" type="radio">
+                                                    <label for="A_H" id="A_H_Label" title="Loss of availability. E.g. Successful DDoS attack where our servers are taken down and our system is no longer accessible.">High (H)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-md-3 mt-3">
+                                    <div class="card">
+                                        <div class="card-header" title="The Remediation Level of a vulnerability is an important factor for prioritization. The typical vulnerability is unpatched when initially published. Workarounds or hotfixes may offer interim remediation until an official patch or upgrade is issued. Each of these respective stages adjusts the temporal score downwards, reflecting the decreasing urgency as remediation becomes final.">
+                                            <p style="margin:0.75rem" id="RL_Heading">Remediation Level (RL)</p>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <input name="RL" value="O" id="RL_O" type="radio">
+                                                    <label for="RL_O" id="RL_O_Label" title="We have an available fix in the latest version of the product.">Official Fix (O)</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input name="RL" value="W" id="RL_W" type="radio">
+                                                    <label for="RL_W" id="RL_W_Label" title="There is a workaround to mitigate the risk. E.g. No X-XSS-Protection header but the page is tested as not vulnerable to XSS.">Workaround (W)</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input name="RL" value="U" id="RL_U" type="radio">
+                                                    <label for="RL_U" id="RL_U_Label" title="There is no remediation level available.">Unavailable (U)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scoreRating">
+                            <p class="needBaseMetrics">Select values for all base metrics to generate score</p>
+                            <span id="baseMetricScore"></span>
+                            <span id="baseSeverity"></span>
+                        </div>
+                    </fieldset>
+                    <input id="vectorString" readonly type="text" style="display:none">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/wrapper -->
+</section>
+<!-- /MAIN CONTENT -->
+<!--main content end-->

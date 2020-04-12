@@ -89,7 +89,7 @@
             </thead>
             <tbody>
               <tr *ngFor="let checklists of checklistTypes | stringFilter : queryString; let myIndex = index">
-                <td style="color:#515594"><a [routerLink]="['/checklist-manage',checklists.id]"
+                <td style="color:#1976D2"><a [routerLink]="['/checklist-manage',checklists.id]"
                     class="btn btn-default btn-xs">{{checklists.title}}</a></td>
                 <td>{{checklists.description}}</td>
                 <td>{{checklists.visibility}}</td>

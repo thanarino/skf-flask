@@ -2,25 +2,60 @@
 @import "~@ng-select/ng-select/themes/default.theme.css";
 
 .ng-select .ng-select-container {
-  min-height: 50px;
+  background-color: #212121;
 }
 
-.ng-select.ng-select-single .ng-select-container {
-  height: 50px;
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+  background-color: #303030;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.6);
 }
 
-.ng-placeholder {
-  margin-top: 10px;
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon.left:hover {
+  border-radius: 10px 0 0 10px;
+  color: rgba(255,255,255,0.87);
+  background-color: #656565;
+}
+
+.ng-dropdown-panel {
+  border: 0px;
+  background-color: #212121;
+}
+
+.ng-select .ng-select-container {
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 25px;
+  color: rgba(255,255,255,0.87) !important;
+}
+
+.ng-select.ng-select-opened>.ng-select-container {
+  background-color: #212121;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 15px;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items {
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-placeholder {
+  position: initial !important;
+  padding-bottom: 0px;
 }
 
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected {
-  background: #515594;
+  background: #1976D2;
   color: #ffffff;
 }
 
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+  background-color: #212121;
+  color: rgba(255,255,255,0.87);
+}
+
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
-  background-color: #abb0ef;
-  color: #333;
+  background-color: rgb(94, 153, 212);
+  color: rgba(0,0,0,0.87);
 }
 
 .form-control {

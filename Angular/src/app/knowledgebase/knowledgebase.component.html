@@ -67,7 +67,7 @@
 						<div *ngFor="let knowledge of knowledgeitems | stringFilter : queryString">
 							<div *ngIf="knowledge.kb_id != 1">
 							<br />
-							<ngb-panel title="{{knowledge.title}}">
+							<ngb-panel title="{{knowledge.title}}" class="kb-card">
 								<ng-template ngbPanelContent>
 									<p style="white-space: pre-line; max-width:70%">
 										{{knowledge.content}}

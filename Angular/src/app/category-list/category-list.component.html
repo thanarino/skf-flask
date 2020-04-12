@@ -109,7 +109,7 @@
             </thead>
             <tbody>
               <tr *ngFor="let category of categories; let myIndex = index">
-                <td style="color:#515594">{{category.name}}</td>
+                <td style="color:#1976D2">{{category.name}}</td>
                 <td>{{category.description}}</td>
                 <td>
                   <button (click)="open(modalUpdateCategory); getSet(category.name, category.description)" id="update-button" class="btn btn-warning btn-xs">

@@ -63,6 +63,7 @@ import { FirstLoginComponent } from './first-login/first-login.component';
 import { UndefinedComponent } from './undefined/undefined.component';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { CalcComponent } from './calc/calc.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +95,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     FirstLoginComponent,
     UndefinedComponent,
     LabsComponent,
-    QuestionnaireComponent
+    QuestionnaireComponent,
+    CalcComponent
   ],
   imports: [
     BrowserModule,

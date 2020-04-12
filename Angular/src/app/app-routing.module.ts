@@ -7,6 +7,7 @@ import { ProjectSummaryComponent } from './project-summary/project-summary.compo
 import { PluginManagerComponent }   from './plugin-manager/plugin-manager.component';
 import { UserAddComponent } from './user-add/user-add.component';
 import { LabsComponent } from './labs/labs.component';
+import { CalcComponent } from './calc/calc.component';
 import { KnowledgebaseComponent } from './knowledgebase/knowledgebase.component';
 import { KnowledgebaseEditComponent } from './knowledgebase-edit/knowledgebase-edit.component';
 import { CodeExamplesComponent } from './code-examples/code-examples.component';
@@ -30,6 +31,7 @@ export const appRoutes: Routes = [
 
   { path: 'dashboard', component: DashboardComponent, canActivate: [GuardService] },
   { path: 'labs', component: LabsComponent, canActivate: [GuardService] },
+  { path: 'calc', component: CalcComponent, canActivate: [GuardService] },
   { path: 'project-list', component: ProjectListComponent, canActivate: [GuardService] },
   { path: 'project-dashboard/:id', component: ProjectDashboardComponent, canActivate: [GuardService] },
   { path: 'plugin-manager', component: PluginManagerComponent, canActivate: [GuardService] },

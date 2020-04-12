@@ -18,9 +18,10 @@ export class HeaderComponent implements OnInit {
   public results: boolean;
   public code: boolean;
   public labs: boolean;
+  public calc: boolean;
   public knowledge: boolean;
   public check: boolean;
-  public color = '#515594';
+  public color = '#1976D2';
   public user: string = AppSettings.USER;
   public canManage: boolean;
   public canEdit: boolean;
@@ -48,6 +49,7 @@ export class HeaderComponent implements OnInit {
     this.check = false;
     this.code = false;
     this.labs = false;
+    this.calc = false;
   }
 
   LabsShow() {
@@ -59,6 +61,7 @@ export class HeaderComponent implements OnInit {
     this.check = false;
     this.code = false;
     this.labs = true;
+    this.calc = false;
   }
 
   ProjectsShow() {
@@ -70,6 +73,7 @@ export class HeaderComponent implements OnInit {
     this.check = false;
     this.code = false;
     this.labs = false;
+    this.calc = false;
   }
 
   UsersShow() {
@@ -81,6 +85,7 @@ export class HeaderComponent implements OnInit {
     this.check = false;
     this.code = false;
     this.labs = false;
+    this.calc = false;
   }
 
   GroupsShow() {
@@ -92,6 +97,7 @@ export class HeaderComponent implements OnInit {
     this.check = false;
     this.code = false;
     this.labs = false;
+    this.calc = false;
   }
 
   ResultsShow() {
@@ -103,6 +109,7 @@ export class HeaderComponent implements OnInit {
     this.check = false;
     this.code = false;
     this.labs = false;
+    this.calc = false;
   }
 
   CodeShow() {
@@ -114,6 +121,7 @@ export class HeaderComponent implements OnInit {
     this.check = false;
     this.code = true;
     this.labs = false;
+    this.calc = false;
   }
 
   KnowledgeShow() {
@@ -125,6 +133,7 @@ export class HeaderComponent implements OnInit {
     this.check = false;
     this.code = false;
     this.labs = false;
+    this.calc = false;
   }
 
   CheckShow() {
@@ -136,6 +145,19 @@ export class HeaderComponent implements OnInit {
     this.check = true;
     this.code = false;
     this.labs = false;
+    this.calc = false;
+  }
+
+  CalcShow() {
+    this.projects = false;
+    this.users = false;
+    this.groups = false;
+    this.results = false;
+    this.knowledge = false;
+    this.check = false;
+    this.code = false;
+    this.labs = false;
+    this.calc = true;
   }
 
   ResetAll() {
@@ -163,6 +185,7 @@ export class HeaderComponent implements OnInit {
   getKnowledgeStyle() { if (this.knowledge) { return this.color; } else { return '' } }
   getLabsStyle() { if (this.labs) { return this.color; } else { return '' } }
   getCodeStyle() { if (this.code) { return this.color; } else { return '' } }
+  getCalcStyle() { if (this.calc) { return this.color; } else { return '' } }
   getChecklistStyle() { if (this.check) { return this.color; } else { return '' } }
 
 }

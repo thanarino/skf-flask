@@ -161,11 +161,11 @@ def main():
         if  settings.JWT_SECRET == '':
             log.info('>>>>> Configure the JWT_SECRET in the settings.py file and choose an unique 128 character long secret <<<<<')
         else:
-            log.info('>>>>> Starting development server http://'+settings.FLASK_HOST+":"+str(settings.FLASK_PORT)+' <<<<<')
+            log.info('>>>>> Starting NOT DEBUG development server http://'+settings.FLASK_HOST+":"+str(settings.FLASK_PORT)+' <<<<<')
             app.run(host=settings.FLASK_HOST, port=settings.FLASK_PORT, debug=app.debug)
     if app.debug == True:
         if  settings.JWT_SECRET == 'True':
-            log.info('>>>>> Starting development server http://'+settings.FLASK_HOST+":"+str(settings.FLASK_PORT)+' <<<<<')
+            log.info('>>>>> Starting DEBUG development server http://'+settings.FLASK_HOST+":"+str(settings.FLASK_PORT)+' <<<<<')
             app.run(host=settings.FLASK_HOST, port=settings.FLASK_PORT, debug=app.debug)    
 
 if __name__ == "__main__":

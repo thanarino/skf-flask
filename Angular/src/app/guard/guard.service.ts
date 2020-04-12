@@ -14,6 +14,8 @@ export class GuardService implements CanActivate {
             return this.returner
         }
 
+        sessionStorage.setItem("first_url", location.href);
+
         // not logged in so redirect to login page
         this.router.navigate(['/login']);
          this.returner = false;

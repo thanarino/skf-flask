@@ -1,0 +1,116 @@
+fieldset input {
+    display: none;
+    width: auto;
+}
+
+fieldset label {
+    background: #656565;
+    display: inline-block;
+    font-size:110%;
+    text-align: center;
+    padding: 3% 0%;
+    margin: 3px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgba(255,255,255,0.87);
+    border: 1px solid #424242;
+    user-select: none;
+    width: 90%;
+}
+
+fieldset label:hover {
+    background: #cccccc;
+    color: rgba(0,0,0,0.87);
+    border: 1px solid #666666;
+}
+
+fieldset input:checked + label {
+    background: #1976D2;
+    border: 1px solid #1976D2;
+    color: #ffffff;
+}
+
+div.card-header {
+    text-align: left;
+    font-size: 120%;
+    padding: 0;
+}
+
+div.card-block div.row div {
+    padding-right: 0px;
+
+}
+
+.scoreRating {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    padding: 0 0.4em;
+    margin: 0 15px;
+    border: 2px solid #666666;
+    background: #424242;
+    font-size: 11px;
+    border-radius: 10px;
+    width: 120px;
+    height: auto;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  .scoreRating.none,
+  .scoreRating.low,
+  .scoreRating.medium,
+  .scoreRating.high,
+  .scoreRating.critical {
+    color: #ffffff;
+  }
+
+  .scoreRating.none {
+    background: #53aa33;
+    border: 2px solid #53aa33;
+  }
+
+  .scoreRating.low {
+    background: #ffcb0d;
+    border: 2px solid #ffcb0d;
+  }
+
+  .scoreRating.medium {
+    background: #f9a009;
+    border: 2px solid #f9a009;
+  }
+
+  .scoreRating.high {
+    background: #df3d03;
+    border: 2px solid #df3d03;
+  }
+
+  .scoreRating.critical {
+    background: #cc0500;
+    border: 2px solid #cc0500;
+  }
+
+  .scoreRating span {
+    font-size: 150%;
+    font-weight: bold;
+    width: 100%;
+  }
+
+  #baseMetricScore,
+  #temporalMetricScore,
+  #environmentalMetricScore {
+    display: block;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: normal;
+    margin-top: 4px;
+  }
+
+  #baseSeverity,
+  #temporalSeverity,
+  #environmentalSeverity {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    display: block;
+  }

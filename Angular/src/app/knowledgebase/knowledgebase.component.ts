@@ -70,7 +70,10 @@ export class KnowledgebaseComponent implements OnInit
 
   getKnowledgeItems(category_id: number)
   {
-    this._knowledgeService.getKnowledgeBase(category_id).subscribe(requestData => this.knowledgeitems = requestData,
+    this._knowledgeService.getKnowledgeBase(category_id).subscribe(requestData => {
+      console.log(requestData)
+      this.knowledgeitems = requestData;
+    },
       () => console.log('Error getting knowledge items, contact the administrator!')
     );
   }

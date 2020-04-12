@@ -105,6 +105,12 @@
                         <span id="6">Labs</span>
                     </a>
                 </li>
+                <li [style.background-color]="getCalcStyle()" class="">
+                    <a routerLink="/calc" (click)="ResetAll(); CalcShow()" id="7" class="primairy">
+                        <i class="fa fa-bug"></i>
+                        <span id="6">CVSS Calculator</span>
+                    </a>
+                </li>
             </ul>
 
             <div class="copy">

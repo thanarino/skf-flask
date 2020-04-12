@@ -7,7 +7,9 @@ import { Knowledgebase } from './models/knowledgebase'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  providers: [HeaderComponent, FooterComponent, KnowledgebaseService],
+  providers: [HeaderComponent, FooterComponent, KnowledgebaseService, {
+    provide: Window, useValue: window
+  }],
 })
 
 export class AppComponent implements OnInit {
